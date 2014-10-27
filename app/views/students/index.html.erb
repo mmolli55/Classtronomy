@@ -1,1 +1,11 @@
 <h1>Class Roster</h1>
+
+<% @students.each do |student| %>
+  <div class="student_wrapper">
+    <h2 class="name"><%= link_to student.name, student %></h2>
+    <p><%= student.email %></p>
+    <hr>
+  </div>
+<% end %>
+
+<p><%= link_to 'Back Home', root_path %></p>
