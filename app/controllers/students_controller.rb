@@ -21,6 +21,27 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def edit
+    @student = Student.find(params[:id])
+  end
+
+  def update
+    @student = Student.find(params[:id])
+
+    if @student.update(params[:student].permit(:name, :email, :password))
+      redirect_to @student
+    else
+      render edit
+    end
+  end
+
+  def destroy
+    @student = Student.find(params[:id])
+    @student.destroy
+
+    redirect_to students_path
+  end
+
   private
 
   def student_params
