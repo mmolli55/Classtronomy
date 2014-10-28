@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to @student
     else
-      render :new
+      render 'new'
     end
   end
 

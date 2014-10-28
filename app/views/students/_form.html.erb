@@ -1,4 +1,16 @@
 <%= form_for @student do |f| %>
+
+  <% if @student.errors.any? %>
+    <div id="errors">
+      <h2><%= pluralize(@student.errors.count, "error") %> prevented this post from saving.</h2>
+      <ul>
+        <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
