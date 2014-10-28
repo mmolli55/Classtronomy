@@ -1,6 +1,13 @@
 <h1>List of Courses</h1>
 
-<div class="course_container">
+<% @courses.each do |course| %>
+  <div class="course_wrapper">
+    <h2 class="name"><%= link_to course.name, course %></h2>
+    <hr>
+  </div>
+<% end %>
+
+<!-- <div class="course_container">
   <h2>Planets</h2>
 </div>
 
@@ -10,6 +17,6 @@
 
 <div class="course_container">
   <h2>Galaxies <span class="coming_soon">- coming soon!</span></h2>
-</div>
+</div> -->
 
 <p><%= link_to 'Back Home', root_path %></p>
