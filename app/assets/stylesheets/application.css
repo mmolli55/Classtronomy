@@ -16,4 +16,29 @@
 
 body {
   background: #DBDBDB;
+  font-family: 'GillSans';
+}
+
+#landing_page_quote {
+  color: #0099FF;
+}
+
+h1 {
+  color: #FF4719;
+}
+
+h2 {
+  color: #0099FF;
+}
+
+a {
+  color: #515151;
+}
+
+a:visited {
+
+}
+
+a:hover {
+  color: #82FFFF;
 }
