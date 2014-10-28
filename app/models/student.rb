@@ -1,6 +1,6 @@
 class Student < ActiveRecord::Base
-  # before_create :create_remember_token
-  # before_save :normalize_fields
+  before_create :create_remember_token
+  before_save :normalize_fields
 
   validates :name,
     presence: true,
@@ -15,4 +15,22 @@ class Student < ActiveRecord::Base
     length: {minimum: 8 }
 
   has_secure_password
+
+  def Student.new_remember_token
+    SecureRandom.urlsafe_base64
+  end
+
+  def Student.hash(token)
+    Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  private
+
+  def create_remember_token
+    remember_token = Student.hash(Student.new_remember_token)
+  end
+
+  def normalize_fields
+    self.email.downcase!
+  end
 end

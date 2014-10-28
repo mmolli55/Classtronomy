@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  skip_before_action :require_signin, only: [:new, :create]
 
   def index
     @students = Student.all
