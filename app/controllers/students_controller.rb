@@ -12,6 +12,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
+      sign_in @student
       redirect_to @student
     else
       render 'new'
