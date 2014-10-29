@@ -3,11 +3,11 @@
 
 <p><%= @course.paragraph1 %></p>
 
-#image
+<%= image_tag(@course.image) %>
 
 <p><%= @course.paragraph2 %></p>
 
-#video
+<iframe width="560" height="315" src="<%= @course.video %>" frameborder="0" allowfullscreen></iframe>
 
 <p><%= @course.paragraph3 %></p>
 
