@@ -11,6 +11,15 @@
 
 <p><%= @course.paragraph3 %></p>
 
+<h1>Time for a Quiz!</h1>
+
+<% @course.questions.each do |question| %>
+  <div class="question_wrapper">
+    <h2 class="question"><%= question.content %></h2>
+    <hr>
+  </div>
+<% end %>
+
 
 <%= link_to 'Back Home', root_path %>
 <%= link_to 'Course List', courses_path %>
