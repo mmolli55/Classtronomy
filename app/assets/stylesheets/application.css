@@ -15,12 +15,48 @@
  */
 
 body {
-  background: #DBDBDB;
+  background: #AEAEAE;
   font-family: 'GillSans';
 }
 
+/*
+********************
+Landing Page Styling
+********************
+*/
+.content_container {
+  width: 600px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+#greeting {
+  width: 400px;
+  background: #F0F0F0;
+  text-align: center;
+  font-size: 45px;
+  border-top: 5px solid #515151;
+  border-bottom: 5px solid #515151;
+  padding: 10px 0 10px 0;
+  /*border-radius: 20px;*/
+  margin: 30px auto 0 auto;
+}
+
 #landing_page_quote {
+  width: 400px;
+  background: #F0F0F0;
+  border-top: 5px solid #515151;
+  border-bottom: 5px solid #515151;
+  /*border-radius: 20px;*/
+  padding: 10px 0 10px 0;
   color: #0099FF;
+  font-size: 20px;
+  text-align: center;
+  margin: 50px auto 10px auto;
+}
+
+#nav_bar {
+  text-align: center;
 }
 
 h1 {

@@ -1,0 +1,16 @@
+<h1><%= @course.name %></h1>
+<%= link_to "Edit", edit_course_path(@course) %>
+
+<p><%= @course.paragraph1 %></p>
+
+#image
+
+<p><%= @course.paragraph2 %></p>
+
+#video
+
+<p><%= @course.paragraph3 %></p>
+
+
+<%= link_to 'Back Home', root_path %>
+<%= link_to 'Course List', courses_path %>

@@ -1,0 +1,29 @@
+<%= form_for @course do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :paragraph1 %>
+  <%= f.text_area :paragraph1 %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+</p>
+<p>
+  <%= f.label :paragraph2 %>
+  <%= f.text_area :paragraph2 %>
+</p>
+<p>
+  <%= f.label :video %>
+  <%= f.text_area :video %>
+</p>
+<p>
+  <%= f.label :paragraph3 %>
+  <%= f.text_area :paragraph3 %>
+</p>
+<p>
+  <%= f.submit 'Submit', id: 'submit' %>
+</p>
+<% end %>
