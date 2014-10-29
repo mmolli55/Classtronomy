@@ -16,6 +16,14 @@
 <% @course.questions.each do |question| %>
   <div class="question_wrapper">
     <h2 class="question"><%= question.content %></h2>
+
+      <%= form_for question do |f| %>
+        <% question.answers.each do |answer| %>
+          <input type="radio" name="answer" value="<%= answer.content %>" /><%= answer.content %>
+        <% end %>
+        <%= f.submit 'Submit', id: 'submit' %>
+      <% end %>
+
     <hr>
   </div>
 <% end %>
