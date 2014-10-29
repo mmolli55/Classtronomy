@@ -26,7 +26,19 @@ Landing Page Styling
 */
 #landing_page_body {
   background: #AEAEAE;
+  background-image: url(http://www.wallpaperfo.com/thumbnails/detail/20121106/outer%20space%20stars%20cosmos%20galaxy%201920x1080%20wallpaper_www.wallpaperfo.com_2.jpg);
+  background-size: cover
 }
+
+#landing_page_body a {
+  color: #FF4719;
+  font-size: 25px;
+}
+
+#landing_page_body a:hover {
+  color: #82FFFF;
+}
+
 .content_container {
   width: 600px;
   height: 800px;
@@ -38,8 +50,7 @@ Landing Page Styling
   background: #F0F0F0;
   text-align: center;
   font-size: 45px;
-  border-top: 5px solid #515151;
-  border-bottom: 5px solid #515151;
+  border: 5px solid #515151;
   padding: 10px 0 10px 0;
   /*border-radius: 20px;*/
   margin: 30px auto 0 auto;
@@ -48,8 +59,7 @@ Landing Page Styling
 #landing_page_quote {
   width: 400px;
   background: #F0F0F0;
-  border-top: 5px solid #515151;
-  border-bottom: 5px solid #515151;
+  border: 5px solid #515151;
   /*border-radius: 20px;*/
   padding: 10px 0 10px 0;
   color: #0099FF;
@@ -59,7 +69,12 @@ Landing Page Styling
 }
 
 #nav_bar {
+  width: 400px;
+  background: #F0F0F0;
   text-align: center;
+  margin: 50px auto 10px auto;
+  padding: 10px 0 10px 0;
+  border: 5px solid #515151;
 }
 
 h1 {
