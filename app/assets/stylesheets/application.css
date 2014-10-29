@@ -15,7 +15,7 @@
  */
 
 body {
-  background: #AEAEAE;
+  background: #F0F0F0;
   font-family: 'GillSans';
 }
 
@@ -24,6 +24,9 @@ body {
 Landing Page Styling
 ********************
 */
+#landing_page_body {
+  background: #AEAEAE;
+}
 .content_container {
   width: 600px;
   height: 800px;
