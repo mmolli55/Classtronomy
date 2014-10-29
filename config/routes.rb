@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :students
   resources :sessions, only: [:new, :create]
   resources :courses
+  resources :questions
 
   root 'welcome#index'
 
