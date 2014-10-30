@@ -8,6 +8,9 @@ class QuizResponse < ActiveRecord::Base
   end
 
   def check_correctness
+    # @quiz_response ==
+
     # Answer.find(:id).correct
   end
 end
+
