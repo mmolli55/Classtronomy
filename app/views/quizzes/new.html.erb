@@ -1,0 +1,32 @@
+<h1><%= "#{@quiz.course_name} Quiz:" %></h1>
+
+<% if @quiz.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@quiz.errors.count, "error") %> prohibited this quiz from being saved:</h2>
+
+    <ul>
+    <% @quiz.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% @quiz.quiz_responses.each do |quiz_response| %>
+  <%= form_for quiz_response do |f| %>
+    <% question = quiz_response.question %>
+    <%= f.hidden_field :question_id %>
+    <%= f.hidden_field :quiz_id %>
+    <h2><%= question.content %></h2>
+    <% question.answers.each do |answer| %>
+
+      <% checked = quiz_response.answer == answer %>
+      <%= f.radio_button :answer_id, answer.id, checked: checked %>
+      <%= f.label :answer_id, answer.content %>
+    <% end %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
+
+
+<%= link_to 'Back', quizzes_path %>

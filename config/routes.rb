@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
 
+  resources :quizzes
+
   resources :students
   resources :sessions, only: [:new, :create]
-  resources :courses
-  resources :questions
+  resources :courses do
+    resources :quizzes, only: :new
+    resources :questions, shallow: true do
+      resources :answers, shallow: true
+    end
+  end
+
+  resources :quiz_responses
+
+  # post 'quiz_responses', to: 'quiz_response#create'
 
   root 'welcome#index'
 
   get '/enroll', to: 'students#new'
   get '/signin', to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
