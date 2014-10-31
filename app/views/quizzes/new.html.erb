@@ -18,13 +18,17 @@
     <%= f.hidden_field :question_id %>
     <%= f.hidden_field :quiz_id %>
     <h2><%= question.content %></h2>
-    <% question.answers.each do |answer| %>
 
-      <% checked = quiz_response.answer == answer %>
-      <%= f.radio_button :answer_id, answer.id, checked: checked %>
-      <%= f.label :answer_id, answer.content %>
+    <% question.answers.each do |answer| %>
+      <% this_is_the_selected_answer = (quiz_response.answer == answer) %>
+      <%= f.radio_button :answer_id, answer.id, checked: this_is_the_selected_answer %>
     <% end %>
+
     <%= f.submit %>
+    <!-- Feedback -->
+    <span class="<%= quiz_response.correct ? 'correct' : 'wrong' %>">
+      <%= quiz_response.correct ? "Great job!" : "Sorry.  Try again." %>
+    </span>
   <% end %>
 <% end %>
 
