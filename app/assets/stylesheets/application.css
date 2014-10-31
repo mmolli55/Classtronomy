@@ -77,6 +77,10 @@ Landing Page Styling
   border: 5px solid #515151;
 }
 
+#quiz_response {}
+
+quiz_response.correct ? 'correct' : 'wrong'
+
 h1 {
   color: #FF4719;
 }
